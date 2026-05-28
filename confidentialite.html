@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de Confidentialité – Seb7a</title>
+<style>
+  :root {
+    --primary: #2e7d32;
+    --primary-light: #e8f5e9;
+    --accent: #43a047;
+    --text: #212121;
+    --muted: #757575;
+    --bg: #fafafa;
+    --card: #ffffff;
+    --border: #e0e0e0;
+    --warn-bg: #fff8e1;
+    --warn-border: #f9a825;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 40px 24px 32px;
+    text-align: center;
+  }
+  .app-name { font-size: 2rem; font-weight: 700; letter-spacing: 1px; }
+  .subtitle { font-size: 1rem; opacity: 0.85; margin-top: 4px; }
+  .last-updated { font-size: 0.82rem; opacity: 0.7; margin-top: 8px; }
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+  }
+  .intro-box {
+    background: var(--primary-light);
+    border-left: 4px solid var(--primary);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    font-size: 0.95rem;
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .icon {
+    background: var(--primary);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 18px 0 10px;
+  }
+  p { margin-bottom: 12px; }
+  ul { padding-left: 20px; margin-bottom: 12px; }
+  ul li { margin-bottom: 6px; }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .highlight-box {
+    background: var(--primary-light);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    font-size: 0.92rem;
+  }
+  .warning-box {
+    background: var(--warn-bg);
+    border-left: 4px solid var(--warn-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 0.92rem;
+  }
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    margin-top: 8px;
+  }
+  .data-table th {
+    background: var(--primary);
+    color: white;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+  }
+  .data-table th:first-child { border-radius: 8px 0 0 0; }
+  .data-table th:last-child { border-radius: 0 8px 0 0; }
+  .data-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:nth-child(even) td { background: #f5f5f5; }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin: 2px 2px 2px 0;
+  }
+  .badge-func { background: #e3f2fd; color: #1565c0; }
+  .badge-pub  { background: #fce4ec; color: #b71c1c; }
+  .badge-tech { background: #f3e5f5; color: #6a1b9a; }
+  .service-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    background: #fafafa;
+  }
+  .service-card .name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  .service-card .purpose {
+    font-size: 0.88rem;
+    color: #444;
+    margin-bottom: 8px;
+  }
+  .service-card a { font-size: 0.85rem; }
+  .contact-box {
+    background: var(--primary-light);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 8px;
+    text-align: center;
+  }
+  .contact-box h2 { justify-content: center; margin-bottom: 12px; }
+  .contact-box p { color: var(--text); font-size: 0.95rem; }
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+</style>
+</head>
+<body>
+<header>
+<div class="app-name">Seb7a</div>
+<div class="subtitle">Politique de Confidentialit&eacute;</div>
+<div class="last-updated">Derni&egrave;re mise &agrave; jour : 28 Mai 2026</div>
+</header>
+<main>
+<div class="intro-box">Cette politique de confidentialit&eacute; s'applique &agrave; l'application mobile <strong>Seb7a</strong> (ci-apr&egrave;s &laquo; l'Application &raquo;) publi&eacute;e sur le Google Play Store. Elle d&eacute;crit quelles donn&eacute;es sont collect&eacute;es, comment elles sont utilis&eacute;es &mdash; y compris &agrave; des <strong>fins publicitaires.</strong></div>
+<!-- 1. Responsable -->
+<section>
+<h2><span class="icon">1</span> Responsable du traitement</h2>
+<p>L'Application est d&eacute;velopp&eacute;e et g&eacute;r&eacute;e par le d&eacute;veloppeur de <strong>Seb7a</strong>. Pour toute question relative &agrave; cette politique, vous pouvez nous contacter via l'adresse indiqu&eacute;e &agrave; la fin de ce document.</p>
+</section>
+<!-- 2. Données collectées -->
+<section>
+<h2><span class="icon">2</span> Donn&eacute;es collect&eacute;es</h2>
+<div class="highlight-box"><strong>🔒 Aucun compte utilisateur requis.</strong> L'Application utilise uniquement une <em>authentification anonyme</em> fournie par Firebase. Aucun nom, adresse e-mail ni num&eacute;ro de t&eacute;l&eacute;phone n'est collect&eacute;.</div>
+<h3>Donn&eacute;es collect&eacute;es automatiquement</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th>Donn&eacute;e</th>
+<th>Source</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identifiant anonyme utilisateur</td>
+<td>Firebase Auth</td>
+<td><span class="badge badge-func">Fonctionnel</span> <span class="badge badge-pub">Publicitaire</span></td>
+</tr>
+<tr>
+<td>Token de notification (FCM)</td>
+<td>Firebase FCM</td>
+<td><span class="badge badge-func">Fonctionnel</span> <span class="badge badge-pub">Publicitaire</span></td>
+</tr>
+<tr>
+<td>App Instance ID (identifiant unique par installation)</td>
+<td>Firebase Analytics</td>
+<td><span class="badge badge-func">Fonctionnel</span> <span class="badge badge-pub">Publicitaire</span></td>
+</tr>
+<tr>
+<td>Statistiques d'utilisation (&eacute;crans, sessions, &eacute;v&eacute;nements, dur&eacute;e)</td>
+<td>Firebase Analytics</td>
+<td><span class="badge badge-tech">Analytique</span> <span class="badge badge-pub">Publicitaire</span></td>
+</tr>
+<tr>
+<td>Type d'appareil, version OS, langue, pays</td>
+<td>Firebase Analytics</td>
+<td><span class="badge badge-tech">Analytique</span> <span class="badge badge-pub">Publicitaire</span></td>
+</tr>
+<tr>
+<td>Adresse IP (tronqu&eacute;e par Google, utilis&eacute;e pour d&eacute;duire le pays)</td>
+<td>Firebase Analytics</td>
+<td><span class="badge badge-tech">Analytique</span></td>
+</tr>
+<tr>
+<td>Rapports de plantage et traces d'erreurs</td>
+<td>Firebase Crashlytics</td>
+<td><span class="badge badge-tech">Technique</span></td>
+</tr>
+<tr>
+<td>Signal d'int&eacute;grit&eacute; de l'application</td>
+<td>Firebase App Check</td>
+<td><span class="badge badge-tech">S&eacute;curit&eacute;</span></td>
+</tr>
+</tbody>
+</table>
+<h3>Stockage dans notre base de donn&eacute;es (Firestore)</h3>
+<p>Votre <strong>identifiant anonyme (UID)</strong> est utilis&eacute; comme cl&eacute; de document dans Firestore. Ce document contient votre <strong>token FCM</strong> et certaines <strong>statistiques d'utilisation</strong> li&eacute;es &agrave; cet identifiant. Ces donn&eacute;es sont utilis&eacute;es pour :</p>
+<ul>
+<li>Vous envoyer des notifications personnalis&eacute;es ou des messages publicitaires cibl&eacute;s</li>
+<li>Analyser les comportements d'utilisation &agrave; des fins de marketing</li>
+<li>Am&eacute;liorer le ciblage des campagnes de communication</li>
+</ul>
+<div class="warning-box"><strong>⚠️ Usage publicitaire :</strong> Les donn&eacute;es d'utilisation (comportement in-app, fr&eacute;quence, pr&eacute;f&eacute;rences) et votre token FCM peuvent &ecirc;tre utilis&eacute;s pour vous envoyer des <strong>notifications &agrave; caract&egrave;re publicitaire ou promotionnel</strong>.</div>
+<h3>Donn&eacute;es NON collect&eacute;es</h3>
+<ul>
+<li>Nom, pr&eacute;nom, adresse e-mail ou num&eacute;ro de t&eacute;l&eacute;phone</li>
+<li>Localisation GPS pr&eacute;cise</li>
+<li>Contacts, photos, fichiers de l'appareil</li>
+<li>Donn&eacute;es de paiement</li>
+</ul>
+</section>
+<!-- 3. Services tiers -->
+<section>
+<h2><span class="icon">3</span> Services Firebase utilis&eacute;s</h2>
+<div class="service-card">
+<div class="name">🔢 Firebase Analytics</div>
+<div class="purpose">Collecte de statistiques d'utilisation (&eacute;crans, sessions, &eacute;v&eacute;nements). Ces donn&eacute;es sont &eacute;galement utilis&eacute;es pour <strong>analyser le comportement des utilisateurs &agrave; des fins publicitaires</strong> et am&eacute;liorer le ciblage des campagnes.</div>
+<a href="https://firebase.google.com/support/privacy" target="_blank">Politique de confidentialit&eacute; Firebase &rarr;</a></div>
+<div class="service-card">
+<div class="name">🗄️ Firebase Firestore</div>
+<div class="purpose">Base de donn&eacute;es dans laquelle chaque utilisateur est repr&eacute;sent&eacute; par un <strong>document identifi&eacute; par son UID anonyme</strong>, contenant son <strong>token FCM</strong> et certaines <strong>statistiques d'utilisation</strong>. Ces donn&eacute;es sont utilis&eacute;es pour personnaliser les notifications, envoyer des messages publicitaires et segmenter les utilisateurs pour des campagnes marketing.</div>
+<a href="https://firebase.google.com/support/privacy" target="_blank">Politique de confidentialit&eacute; Firebase &rarr;</a></div>
+<div class="service-card">
+<div class="name">🔔 Firebase Cloud Messaging (FCM)</div>
+<div class="purpose">Envoi de notifications push : rappels de dhikr, alertes de pri&egrave;res, mais &eacute;galement <strong>messages &agrave; caract&egrave;re promotionnel ou publicitaire</strong> bas&eacute;s sur votre profil d'utilisation anonyme stock&eacute; dans Firestore.</div>
+<a href="https://firebase.google.com/support/privacy" target="_blank">Politique de confidentialit&eacute; Firebase &rarr;</a></div>
+<div class="service-card">
+<div class="name">💥 Firebase Crashlytics</div>
+<div class="purpose">D&eacute;tection automatique des plantages et erreurs techniques. Donn&eacute;es utilis&eacute;es uniquement pour am&eacute;liorer la stabilit&eacute; de l'application &mdash; aucun usage publicitaire.</div>
+<a href="https://firebase.google.com/support/privacy" target="_blank">Politique de confidentialit&eacute; Firebase &rarr;</a></div>
+<div class="service-card">
+<div class="name">👤 Firebase Authentication (Anonyme)</div>
+<div class="purpose">G&eacute;n&eacute;ration d'un identifiant unique anonyme permettant de lier vos donn&eacute;es (token, statistiques) sans collecter d'identit&eacute; personnelle.</div>
+<a href="https://firebase.google.com/support/privacy" target="_blank">Politique de confidentialit&eacute; Firebase &rarr;</a></div>
+<div class="service-card">
+<div class="name">🛡️ Firebase App Check</div>
+<div class="purpose">Protection contre les acc&egrave;s non autoris&eacute;s et les abus &mdash; aucune donn&eacute;e personnelle collect&eacute;e et aucun usage publicitaire.</div>
+<a href="https://firebase.google.com/support/privacy" target="_blank">Politique de confidentialit&eacute; Firebase &rarr;</a></div>
+<p style="margin-top: 12px; font-size: 0.88rem; color: var(--muted);">Ces services sont op&eacute;r&eacute;s par Google LLC (&Eacute;tats-Unis). Les donn&eacute;es peuvent &ecirc;tre trait&eacute;es sur des serveurs situ&eacute;s hors de votre pays de r&eacute;sidence.</p>
+</section>
+<!-- 4. Finalités -->
+<section>
+<h2><span class="icon">4</span> Finalit&eacute;s du traitement</h2>
+<h3>Finalit&eacute;s techniques et fonctionnelles</h3>
+<ul>
+<li>Assurer le bon fonctionnement et la stabilit&eacute; de l'Application</li>
+<li>D&eacute;tecter et corriger les erreurs et plantages (Crashlytics)</li>
+<li>Prot&eacute;ger l'Application contre les usages frauduleux (App Check)</li>
+<li>Envoyer des rappels et notifications li&eacute;s &agrave; l'usage de l'Application (dhikr, pri&egrave;res)</li>
+</ul>
+<h3>Finalit&eacute;s publicitaires et marketing</h3>
+<ul>
+<li>Envoyer des <strong>notifications push &agrave; caract&egrave;re publicitaire ou promotionnel</strong> via FCM, en utilisant le token stock&eacute; dans Firestore</li>
+<li>Analyser les statistiques d'utilisation (Analytics + Firestore) pour <strong>segmenter les utilisateurs</strong> et adapter les campagnes marketing</li>
+<li>Mesurer l'efficacit&eacute; des campagnes de communication</li>
+<li>Afficher ou envoyer des contenus publicitaires bas&eacute;s sur votre profil d'utilisation anonyme</li>
+</ul>
+</section>
+<!-- 5. Base légale -->
+<section>
+<h2><span class="icon">5</span> Base l&eacute;gale du traitement</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>Traitement</th>
+<th>Base l&eacute;gale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stabilit&eacute;, s&eacute;curit&eacute;, Crashlytics, App Check</td>
+<td>Int&eacute;r&ecirc;t l&eacute;gitime</td>
+</tr>
+<tr>
+<td>Statistiques d'utilisation (Analytics)</td>
+<td>Int&eacute;r&ecirc;t l&eacute;gitime / Consentement</td>
+</tr>
+<tr>
+<td>Notifications fonctionnelles (FCM)</td>
+<td>Consentement (permission notification)</td>
+</tr>
+<tr>
+<td><strong>Notifications publicitaires (FCM + Firestore)</strong></td>
+<td><strong>Consentement &mdash; r&eacute;vocable via les param&egrave;tres Android (permission notifications) ou par d&eacute;sinstallation</strong></td>
+</tr>
+<tr>
+<td><strong>Analyse &agrave; fins publicitaires (Analytics + Firestore)</strong></td>
+<td><strong>Consentement &mdash; r&eacute;vocable par d&eacute;sinstallation de l'Application</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- 6. Droits -->
+<section>
+<h2><span class="icon">6</span> Droits des utilisateurs</h2>
+<p>L'Application utilise uniquement des <strong>identifiants anonymes</strong> (UID Firebase, token FCM) sans collecter de nom, e-mail ou num&eacute;ro de t&eacute;l&eacute;phone. En l'absence d'identit&eacute; personnelle, il n'est pas possible d'exercer un droit d'acc&egrave;s ou de rectification individuel. Le seul moyen de cesser la collecte est de <strong>d&eacute;sinstaller l'Application</strong>.</p>
+<p>La d&eacute;sinstallation entra&icirc;ne :</p>
+<ul>
+<li>L'invalidation de votre token FCM (les notifications ne seront plus envoy&eacute;es)</li>
+<li>La suppression des donn&eacute;es locales de l'Application sur votre appareil</li>
+</ul>
+<p><strong>Note :</strong> Les donn&eacute;es d&eacute;j&agrave; collect&eacute;es et stock&eacute;es sur les serveurs Firebase (token, statistiques, identifiant anonyme) <strong>ne sont pas supprim&eacute;es</strong> lors de la d&eacute;sinstallation et restent conserv&eacute;es ind&eacute;finiment.</p>
+</section>
+<!-- 7. Partage -->
+<section>
+<h2><span class="icon">7</span> Partage et cession des donn&eacute;es avec des tiers</h2>
+<p>Vos donn&eacute;es sont transmises aux services Firebase (Google LLC) dans le cadre des finalit&eacute;s d&eacute;crites ci-dessus.</p>
+<p>Les <strong>statistiques agr&eacute;g&eacute;es et anonymis&eacute;es</strong> issues d'Analytics et de Firestore (comportement d'utilisation, segments d'audience, fr&eacute;quence d'utilisation, type d'appareil, etc.) peuvent &ecirc;tre <strong>partag&eacute;es, c&eacute;d&eacute;es ou vendues &agrave; des partenaires tiers</strong> &agrave; des fins commerciales, publicitaires ou analytiques.</p>
+<p>Ces donn&eacute;es sont <strong>strictement anonymis&eacute;es et agr&eacute;g&eacute;es</strong> : elles ne permettent en aucun cas d'identifier un utilisateur individuel. <strong>Aucune donn&eacute;e personnelle identifiable</strong> (nom, e-mail, num&eacute;ro de t&eacute;l&eacute;phone, localisation pr&eacute;cise) n'est concern&eacute;e par ce partage, conform&eacute;ment aux lois applicables en mati&egrave;re de protection des donn&eacute;es.</p>
+</section>
+<!-- 8. Permissions -->
+<section>
+<h2><span class="icon">8</span> Permissions demand&eacute;es</h2>
+<ul>
+<li><strong>INTERNET</strong> &mdash; n&eacute;cessaire pour la synchronisation Firebase.</li>
+<li><strong>POST_NOTIFICATIONS</strong> (Android 13+) &mdash; pour l'envoi de notifications fonctionnelles <em>et publicitaires</em>. Vous pouvez refuser ou r&eacute;voquer cette permission &agrave; tout moment depuis les param&egrave;tres de votre appareil.</li>
+<li><strong>RECEIVE_BOOT_COMPLETED</strong> &mdash; pour relancer les rappels programm&eacute;s apr&egrave;s un red&eacute;marrage de l'appareil (si applicable).</li>
+</ul>
+</section>
+<!-- 9. Durée de conservation -->
+<section>
+<h2><span class="icon">9</span> Dur&eacute;e de conservation des donn&eacute;es</h2>
+<p>Les donn&eacute;es collect&eacute;es (token FCM, statistiques d'utilisation, identifiant anonyme) sont conserv&eacute;es <strong>ind&eacute;finiment</strong> sur les serveurs Firebase. <strong>La d&eacute;sinstallation de l'Application ne supprime pas ces donn&eacute;es des serveurs.</strong></p>
+<p>Firebase peut appliquer ses propres dur&eacute;es de r&eacute;tention conform&eacute;ment &agrave; sa <a href="https://firebase.google.com/support/privacy" target="_blank">politique de confidentialit&eacute;</a>.</p>
+</section>
+<!-- 11. Modifications -->
+<section>
+<h2><span class="icon">10</span> Modifications de cette politique</h2>
+<p>Nous nous r&eacute;servons le droit de mettre &agrave; jour cette politique de confidentialit&eacute; &agrave; tout moment. En cas de modification, la date de <strong>&laquo;&nbsp;Derni&egrave;re mise &agrave; jour&nbsp;&raquo;</strong> en haut de ce document sera modifi&eacute;e. Nous vous encourageons &agrave; consulter cette page r&eacute;guli&egrave;rement. La poursuite de l'utilisation de l'Application apr&egrave;s toute modification vaut acceptation de la nouvelle politique.</p>
+</section>
+<!-- Contact -->
+<div class="contact-box">
+<h2>📬 Nous contacter</h2>
+<p style="margin-top: 12px;">Pour toute question :</p>
+<p style="margin-top: 12px;"><strong>Application :</strong>&nbsp;Seb7a<br /> <strong>E-mail :</strong> fahdboudakim@gmail.com<br /> <strong>D&eacute;veloppeur : Fahd BOUDAKIM</strong></p>
+</div>
+</main>
+<footer>&copy; 2026 Seb7a</footer>
+</body>
+</html>
