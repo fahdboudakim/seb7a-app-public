@@ -176,10 +176,10 @@
 <header>
 <div class="app-name">Seb7a</div>
 <div class="subtitle">Privacy Policy</div>
-<div class="last-updated">Last updated: May 28, 2026</div>
+<div class="last-updated">Last updated: June 23, 2026</div>
 </header>
 <main>
-<div class="intro-box">This privacy policy applies to the <strong>Seb7a</strong> mobile application (hereinafter the &ldquo;Application&rdquo;) published on the Google Play Store. It describes what data is collected and how it is used &mdash; including for <strong>advertising purposes.</strong></div>
+<div class="intro-box">This privacy policy applies to the <strong>Seb7a</strong> mobile application (hereinafter the &ldquo;Application&rdquo;) published on the Google Play Store. It describes what data is collected and how it is used. <strong>The Application does not require any user account, does not store any user identifier on its servers, and does not perform individual user targeting.</strong></div>
 <!-- 1. Data Controller -->
 <section>
 <h2><span class="icon">1</span> Data Controller</h2>
@@ -188,7 +188,7 @@
 <!-- 2. Data Collected -->
 <section>
 <h2><span class="icon">2</span> Data Collected</h2>
-<div class="highlight-box"><strong>🔒 No user account required.</strong> The Application only uses <em>anonymous authentication</em> provided by Firebase. No name, email address, or phone number is collected.</div>
+<div class="highlight-box"><strong>🔒 No user account required.</strong> The Application has <em>no login or authentication system</em>. No name, email address, phone number, or individual identifier is collected or stored by the developer.</div>
 <h3>Automatically Collected Data</h3>
 <table class="data-table">
 <thead>
@@ -200,34 +200,34 @@
 </thead>
 <tbody>
 <tr>
-<td>Anonymous user identifier</td>
-<td>Firebase Auth</td>
-<td><span class="badge badge-func">Functional</span> <span class="badge badge-pub">Advertising</span></td>
-</tr>
-<tr>
-<td>Notification token (FCM)</td>
-<td>Firebase FCM</td>
-<td><span class="badge badge-func">Functional</span> <span class="badge badge-pub">Advertising</span></td>
-</tr>
-<tr>
-<td>App Instance ID (unique per installation)</td>
+<td>App Instance ID (unique per installation, anonymous)</td>
 <td>Firebase Analytics</td>
-<td><span class="badge badge-func">Functional</span> <span class="badge badge-pub">Advertising</span></td>
+<td><span class="badge badge-func">Functional</span> <span class="badge badge-tech">Analytics</span></td>
 </tr>
 <tr>
-<td>Usage statistics (screens, sessions, events, duration)</td>
+<td>Usage statistics (screens visited, sessions, events, duration)</td>
 <td>Firebase Analytics</td>
-<td><span class="badge badge-tech">Analytics</span> <span class="badge badge-pub">Advertising</span></td>
+<td><span class="badge badge-tech">Analytics</span> <span class="badge badge-pub">Promotional</span></td>
 </tr>
 <tr>
 <td>Device type, OS version, language, country</td>
 <td>Firebase Analytics</td>
-<td><span class="badge badge-tech">Analytics</span> <span class="badge badge-pub">Advertising</span></td>
+<td><span class="badge badge-tech">Analytics</span></td>
 </tr>
 <tr>
-<td>IP address (truncated by Google, used to infer country)</td>
+<td>IP address (truncated by Google, used only to infer country)</td>
 <td>Firebase Analytics</td>
 <td><span class="badge badge-tech">Analytics</span></td>
+</tr>
+<tr>
+<td>Anonymous app-open counter increment (no user ID or device ID attached)</td>
+<td>Firebase Firestore</td>
+<td><span class="badge badge-tech">Analytics</span></td>
+</tr>
+<tr>
+<td>FCM topic subscription (public broadcast channel, managed by Firebase)</td>
+<td>Firebase FCM</td>
+<td><span class="badge badge-func">Functional</span></td>
 </tr>
 <tr>
 <td>Crash reports and error traces</td>
@@ -241,50 +241,56 @@
 </tr>
 </tbody>
 </table>
-<h3>Storage in Our Database (Firestore)</h3>
-<p>Your <strong>anonymous identifier (UID)</strong> is used as the document key in Firestore. This document contains your <strong>FCM token</strong> and certain <strong>usage statistics</strong> linked to that identifier. This data is used to:</p>
+<div class="highlight-box"><strong>No user identity stored on our servers.</strong> The Application does not use Firebase Authentication. No user identifier (UID), FCM token, or personal data is written to Firestore or any database by the developer. Notifications are sent to a public broadcast topic — not to individual users.</div>
+<h3>Data Stored Locally on Your Device</h3>
+<p>The Application uses <strong>GetStorage</strong> (a local key-value store) to persist data on your device only. This includes:</p>
 <ul>
-<li>Send you personalized notifications or targeted advertising messages</li>
-<li>Analyze usage behavior for marketing purposes</li>
-<li>Improve campaign targeting</li>
+<li>App preferences and settings (theme, language, notification schedules)</li>
+<li>Dhikr counters and session history</li>
 </ul>
-<div class="warning-box"><strong>⚠️ Advertising use:</strong> Usage data (in-app behavior, frequency, preferences) and your FCM token may be used to send you <strong>advertising or promotional notifications</strong>.</div>
+<p>This data <strong>never leaves your device</strong> and is not transmitted to any server. It is deleted when you uninstall the Application.</p>
 <h3>Data NOT Collected</h3>
 <ul>
 <li>First name, last name, email address, or phone number</li>
 <li>Precise GPS location</li>
 <li>Contacts, photos, or files on your device</li>
 <li>Payment data</li>
+<li>User account or authentication credentials (no login system)</li>
+<li>Individual FCM push token (not stored by the developer)</li>
 </ul>
 </section>
 <!-- 3. Third-party services -->
 <section>
-<h2><span class="icon">3</span> Firebase Services Used</h2>
+<h2><span class="icon">3</span> Services and Libraries Used</h2>
 <div class="service-card">
-<div class="name">🔢 Firebase Analytics</div>
-<div class="purpose">Collects usage statistics (screens, sessions, events). This data is also used to <strong>analyze user behavior for advertising purposes</strong> and improve campaign targeting.</div>
+<div class="name">📊 Firebase Analytics</div>
+<div class="purpose">Collects anonymous usage statistics (screens visited, sessions, events, duration, device type, OS version, country). This data is used to <strong>understand how the Application is used</strong> and to <strong>inform promotional strategy</strong> (e.g., which features to highlight, when to send broadcast notifications). No individual user profiling or behavioral ad targeting is performed.</div>
 <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy &rarr;</a></div>
 <div class="service-card">
 <div class="name">🗄️ Firebase Firestore</div>
-<div class="purpose">Database where each user is represented by a <strong>document identified by an anonymous UID</strong>, containing the <strong>FCM token</strong> and certain <strong>usage statistics</strong>. This data is used to personalize notifications, send advertising messages, and segment users for marketing campaigns.</div>
+<div class="purpose">Cloud database used to store <strong>app content and configuration</strong> (e.g., dhikr texts, app settings) and to record an <strong>anonymous app-open counter</strong>. Each time the app is launched, a single number is incremented in Firestore with <strong>no user identifier, device ID, or any personal data attached</strong>. This counter is used solely to track the total number of app opens for statistical purposes.</div>
 <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy &rarr;</a></div>
 <div class="service-card">
 <div class="name">🔔 Firebase Cloud Messaging (FCM)</div>
-<div class="purpose">Sends push notifications: dhikr reminders, prayer alerts, and also <strong>promotional or advertising messages</strong> based on your anonymous usage profile stored in Firestore.</div>
+<div class="purpose">Sends push notifications using a <strong>public broadcast topic</strong>. The Application subscribes to a shared topic; notifications are sent to all topic subscribers at once &mdash; not to individual users. <strong>The individual FCM device token is managed entirely by Firebase/Google and is never stored or accessed by the developer.</strong></div>
 <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy &rarr;</a></div>
 <div class="service-card">
 <div class="name">💥 Firebase Crashlytics</div>
-<div class="purpose">Automatic detection of crashes and technical errors. Data is used only to improve app stability &mdash; no advertising use.</div>
-<a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy &rarr;</a></div>
-<div class="service-card">
-<div class="name">👤 Firebase Authentication (Anonymous)</div>
-<div class="purpose">Generates a unique anonymous identifier to link your data (token, statistics) without collecting personal identity information.</div>
+<div class="purpose">Automatic detection of crashes and technical errors. Reports include device model, OS version, app version, and a stack trace. Used exclusively to improve app stability &mdash; no use for promotion or targeting.</div>
 <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy &rarr;</a></div>
 <div class="service-card">
 <div class="name">🛡️ Firebase App Check</div>
-<div class="purpose">Protects against unauthorized access and abuse &mdash; no personal data collected and no advertising use.</div>
+<div class="purpose">Verifies that requests to Firebase services come from the genuine Seb7a app, protecting against abuse. No personal data is collected and no use for promotion or targeting.</div>
 <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy &rarr;</a></div>
-<p style="margin-top: 12px; font-size: 0.88rem; color: var(--muted);">These services are operated by Google LLC (United States). Data may be processed on servers located outside your country of residence.</p>
+<div class="service-card">
+<div class="name">🔔 Flutter Local Notifications</div>
+<div class="purpose">Schedules and displays notifications <strong>locally on your device</strong> (e.g., dhikr reminders). No data is sent to any server. All scheduling logic runs entirely on-device.</div>
+</div>
+<div class="service-card">
+<div class="name">🪟 Flutter Overlay Window</div>
+<div class="purpose">Displays a small overlay (floating widget) over other apps, allowing you to access dhikr features without switching apps. Requires the <strong>"Draw over other apps"</strong> permission granted by you. <strong>No data is collected</strong> through this feature.</div>
+</div>
+<p style="margin-top: 12px; font-size: 0.88rem; color: var(--muted);">Firebase services are operated by Google LLC (United States). Data may be processed on servers located outside your country of residence.</p>
 </section>
 <!-- 4. Purposes -->
 <section>
@@ -294,15 +300,18 @@
 <li>Ensure proper functioning and stability of the Application</li>
 <li>Detect and fix errors and crashes (Crashlytics)</li>
 <li>Protect the Application against fraudulent use (App Check)</li>
-<li>Send reminders and notifications related to app usage (dhikr, prayers)</li>
+<li>Store app preferences and dhikr data locally on your device (GetStorage)</li>
+<li>Schedule and display local dhikr reminders (flutter_local_notifications)</li>
+<li>Display a floating overlay for quick dhikr access without leaving your current app (flutter_overlay_window)</li>
+<li>Send reminders and notifications related to app usage (dhikr) via FCM</li>
 </ul>
-<h3>Advertising and Marketing Purposes</h3>
+<h3>Promotional Purposes</h3>
 <ul>
-<li>Send <strong>advertising or promotional push notifications</strong> via FCM, using the token stored in Firestore</li>
-<li>Analyze usage statistics (Analytics + Firestore) to <strong>segment users</strong> and tailor marketing campaigns</li>
-<li>Measure communication campaign effectiveness</li>
-<li>Display or send advertising content based on your anonymous usage profile</li>
+<li>Send <strong>broadcast push notifications</strong> to all subscribers via an FCM public topic (e.g., feature announcements, seasonal reminders)</li>
+<li>Analyze aggregated usage statistics (Analytics) to <strong>understand global usage trends</strong> and improve promotional messaging</li>
+<li>Measure the effectiveness of broadcast notification campaigns</li>
 </ul>
+<div class="highlight-box"><strong>No individual targeting.</strong> Promotional notifications are sent to a public topic shared by all users &mdash; not based on individual behavior, profile, or stored token. No user segmentation is performed by the developer.</div>
 </section>
 <!-- 5. Legal basis -->
 <section>
@@ -321,19 +330,23 @@
 </tr>
 <tr>
 <td>Usage statistics (Analytics)</td>
-<td>Legitimate interest / Consent</td>
+<td>Legitimate interest (data is anonymous and aggregated, no individual profiling)</td>
 </tr>
 <tr>
-<td>Functional notifications (FCM)</td>
-<td>Consent (notification permission)</td>
+<td>Local notifications and reminders (flutter_local_notifications)</td>
+<td>Consent (notification permission, requested at first use)</td>
 </tr>
 <tr>
-<td><strong>Advertising notifications (FCM + Firestore)</strong></td>
-<td><strong>Consent &mdash; revocable via Android settings (notification permission) or by uninstalling</strong></td>
+<td>Broadcast push notifications via FCM public topic</td>
+<td>Consent &mdash; revocable via Android notification settings or by uninstalling</td>
 </tr>
 <tr>
-<td><strong>Advertising analysis (Analytics + Firestore)</strong></td>
-<td><strong>Consent &mdash; revocable by uninstalling the Application</strong></td>
+<td>Aggregated analytics for promotional purposes</td>
+<td>Legitimate interest (data is anonymous and aggregated, no individual profiling)</td>
+</tr>
+<tr>
+<td>Overlay window (flutter_overlay_window)</td>
+<td>Consent &mdash; user explicitly grants "Draw over other apps" permission in Android settings</td>
 </tr>
 </tbody>
 </table>
@@ -341,34 +354,39 @@
 <!-- 6. Rights -->
 <section>
 <h2><span class="icon">6</span> User Rights</h2>
-<p>The Application only uses <strong>anonymous identifiers</strong> (Firebase UID, FCM token) and does not collect names, emails, or phone numbers. In the absence of personal identity data, it is not possible to exercise individual access or rectification rights. The only way to stop data collection is to <strong>uninstall the Application</strong>.</p>
+<p>The Application <strong>does not use any authentication system</strong> and does not store any user identifier (UID, FCM token, or account) on its servers. Because no individual user data is held by the developer, there is nothing to access, rectify, or export on a per-user basis.</p>
+<p>Analytics data collected by Firebase is anonymous and aggregated.</p>
 <p>Uninstalling results in:</p>
 <ul>
-<li>Invalidation of your FCM token (notifications will no longer be sent)</li>
-<li>Deletion of the Application's local data on your device</li>
+<li>Invalidation of your FCM token (push notifications will no longer be sent)</li>
+<li>Cancellation of all locally scheduled notifications (dhikr alarms)</li>
+<li>Deletion of all locally stored data (GetStorage: preferences, dhikr counters, settings)</li>
+<li>Removal of any active overlay window</li>
 </ul>
-<p><strong>Note:</strong> Data already collected and stored on Firebase servers (token, statistics, anonymous identifier) <strong>is not deleted</strong> when uninstalling and remains retained indefinitely.</p>
+<p><strong>Note:</strong> Anonymous analytics data (App Instance ID, usage events) may persist on Firebase servers after uninstall, as it is managed by Google/Firebase. Since no personally identifiable data is stored, there is nothing further to delete from the developer's side. For Firebase data managed by Google, refer to <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase's privacy policy</a>.</p>
 </section>
 <!-- 7. Sharing -->
 <section>
 <h2><span class="icon">7</span> Data Sharing and Transfer with Third Parties</h2>
-<p>Your data is transmitted to Firebase services (Google LLC) for the purposes described above.</p>
-<p><strong>Aggregated and anonymized statistics</strong> from Analytics and Firestore (usage behavior, audience segments, usage frequency, device type, etc.) may be <strong>shared, transferred, or sold to third-party partners</strong> for commercial, advertising, or analytical purposes.</p>
-<p>This data is <strong>strictly anonymized and aggregated</strong>: it cannot be used to identify an individual user. <strong>No personally identifiable data</strong> (name, email, phone number, precise location) is included in this sharing, in compliance with applicable data protection laws.</p>
+<p>Usage and crash data is transmitted to <strong>Firebase services operated by Google LLC</strong> (United States) for the purposes described above. This data is subject to Google's privacy policy.</p>
+<p>The developer does <strong>not sell, share, or transfer</strong> any user data to third parties. The analytics data processed by Firebase is anonymous and aggregated — it cannot be used to identify an individual user.</p>
+<p>No personally identifiable data (name, email, phone number, precise location, individual device token) is held by or shared from the developer's systems.</p>
 </section>
 <!-- 8. Permissions -->
 <section>
 <h2><span class="icon">8</span> Permissions Requested</h2>
 <ul>
-<li><strong>INTERNET</strong> &mdash; required for Firebase synchronization.</li>
-<li><strong>POST_NOTIFICATIONS</strong> (Android 13+) &mdash; for sending functional <em>and advertising</em> notifications. You may refuse or revoke this permission at any time from your device settings.</li>
-<li><strong>RECEIVE_BOOT_COMPLETED</strong> &mdash; to restart scheduled reminders after device reboot (if applicable).</li>
+<li><strong>INTERNET</strong> &mdash; required for Firebase synchronization (Analytics, Firestore, FCM, Crashlytics, App Check).</li>
+<li><strong>POST_NOTIFICATIONS</strong> (Android 13+) &mdash; for both locally scheduled reminders (flutter_local_notifications) and server-sent notifications (FCM), including functional <em>and advertising</em> messages. You may refuse or revoke this permission at any time from your device settings.</li>
+<li><strong>SYSTEM_ALERT_WINDOW</strong> ("Draw over other apps") &mdash; to display the floating dhikr overlay while using other apps (flutter_overlay_window). This permission is <strong>optional</strong> and must be explicitly granted by the user via Android settings. Denying it disables the overlay feature only.</li>
+<li><strong>SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM</strong> (Android 12+) &mdash; to schedule precise dhikr reminders using the local notification system.</li>
+<li><strong>RECEIVE_BOOT_COMPLETED</strong> &mdash; to reschedule local notification alarms after the device restarts, so reminders are not lost.</li>
 </ul>
 </section>
 <!-- 9. Data retention -->
 <section>
 <h2><span class="icon">9</span> Data Retention Period</h2>
-<p>Collected data (FCM token, usage statistics, anonymous identifier) is retained <strong>indefinitely</strong> on Firebase servers. <strong>Uninstalling the Application does not delete this data from servers.</strong></p>
+<p>Anonymous analytics data (App Instance ID, usage events, device info) is retained by Firebase according to its own retention policies (typically up to 14 months for Analytics). <strong>The developer does not store any user data on its own servers, so there is no developer-side retention period to report.</strong></p>
 <p>Firebase may apply its own retention periods in accordance with its <a href="https://firebase.google.com/support/privacy" target="_blank">privacy policy</a>.</p>
 </section>
 <!-- 10. Changes -->
@@ -380,9 +398,10 @@
 <div class="contact-box">
 <h2>📬 Contact Us</h2>
 <p style="margin-top: 12px;">For any questions:</p>
-<p style="margin-top: 12px;"><strong>Application:</strong>&nbsp;Seb7a<br /> <strong>Email:</strong> fahdboudakim@gmail.com<br /> <strong>Developer: Fahd BOUDAKIM</strong></p>
+<p style="margin-top: 12px;"><strong>Application:</strong>&nbsp;Seb7a<br /> <strong>Email:</strong> fahdboudakim@gmail.com<br /> <strong>Data deletion request:</strong> <a href="mailto:fahdboudakim@gmail.com?subject=Seb7a%20-%20Data%20Deletion%20Request">fahdboudakim@gmail.com</a><br /> <strong>Developer: Fahd BOUDAKIM</strong></p>
+<p style="margin-top: 12px; font-size: 0.88rem; color: var(--muted);">See also: <a href="terms.html">Terms of Service</a></p>
 </div>
 </main>
-<footer>&copy; 2026 Seb7a</footer>
+<footer>&copy; 2026 Seb7a &mdash; Last updated June 23, 2026</footer>
 </body>
 </html>
